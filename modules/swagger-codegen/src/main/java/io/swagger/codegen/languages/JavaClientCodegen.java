@@ -32,7 +32,7 @@ public class JavaClientCodegen extends DefaultCodegen implements CodegenConfig {
     protected String invokerPackage = "org.imintel.client";
     protected String groupId = "org.imintel";
     protected String artifactId = "semapp-java-client";
-    protected String artifactVersion = "1.0.0";
+    protected String artifactVersion = "1.1.0";
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaClientCodegen.class);
 
     protected String sourceFolder = "src/main/java";
