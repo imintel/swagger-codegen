@@ -205,7 +205,7 @@ class BasicJavaGenerator extends BasicGenerator {
   additionalParams ++= Map(
     "artifactId" -> "semapp-java-client",
     "artifactVersion" -> ("1.2.0-SNAPSHOT"),
-    "groupId" -> "org.imintel")
+    "groupId" -> "org.imintel.client")
 
   /**
    * we are defaulting to null values since the codegen uses java objects instead of primitives

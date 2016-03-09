@@ -212,7 +212,7 @@ class BasicScalaGenerator extends BasicGenerator {
   additionalParams ++= Map(
     "artifactId" -> "semapp-scala-client",
     "apiVersion" -> ("1.2.0-SNAPSHOT"),
-    "groupId" -> "org.imintel")
+    "groupId" -> "org.imintel.client")
 
   // supporting classes
   override def supportingFiles = List(
