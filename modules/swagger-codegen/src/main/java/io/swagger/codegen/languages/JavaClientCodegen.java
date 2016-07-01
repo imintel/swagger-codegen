@@ -30,9 +30,9 @@ import org.slf4j.LoggerFactory;
 
 public class JavaClientCodegen extends DefaultCodegen implements CodegenConfig {
     protected String invokerPackage = "org.imintel.client";
-    protected String groupId = "org.imintel";
+    protected String groupId = "org.imintel.client";
     protected String artifactId = "semapp-java-client";
-    protected String artifactVersion = "1.2.0";
+    protected String artifactVersion = "1.3.0";
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaClientCodegen.class);
 
     protected String sourceFolder = "src/main/java";
