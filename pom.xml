@@ -1,3 +1,19 @@
+<!-- pom.xml Created on Aug 29, 2014 Tony Tam <fehguy@gmail.com> -->
+<!--  -->
+<!-- Copyright (c)2014-2017 Institute for Modern Intelligence, 501(c)3 -->
+<!--  -->
+<!-- The U.S. Government's rights to use, modify, reproduce, release, perform, -->
+<!-- display or disclose these data are restricted by Contract No. HM047615FT0806. -->
+<!-- The U.S. Government has a royalty-free government-purpose right to use, -->
+<!-- duplicate, or disclose the work, in whole or in part and in any manner and to -->
+<!-- have or permit other to do so, for government purposes consistent with that -->
+<!-- contract and consistent with rights under FAR 52.227-19 and DFAR 252.227-7014. -->
+<!-- All such use and license are subject to the terms of the open source licenses -->
+<!-- listed here www.missionfocus.com/license.  Any reproduction of computer -->
+<!-- software, computer software documentation, or portions thereof marked with -->
+<!-- this legend must also reproduce these markings. -->
+<!--  -->
+<!--  -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
@@ -515,10 +531,10 @@
         </repository>
     </repositories>
     <properties>
-        <swagger-parser-version>1.0.11-SNAPSHOT</swagger-parser-version>
+        <swagger-parser-version>1.0.11</swagger-parser-version>
         <scala-version>2.11.1</scala-version>
         <felix-version>2.3.4</felix-version>
-        <swagger-core-version>1.5.4-SNAPSHOT</swagger-core-version>
+        <swagger-core-version>1.5.4</swagger-core-version>
         <scala-test-version>2.1.4</scala-test-version>
         <commons-io-version>2.3</commons-io-version>
         <commons-cli-version>1.2</commons-cli-version>
