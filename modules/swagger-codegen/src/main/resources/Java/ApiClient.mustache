@@ -644,7 +644,9 @@ public class ApiClient {
    */
   private Client getClient() {
     if(!hostMap.containsKey(basePath)) {
-      Client client = Client.create();
+      ClientConfig cc = new DefaultClientConfig();
+      cc.getClasses().add(MultiPartWriter.class);
+      Client client = Client.create(cc);      
       if (debugging)
         client.addFilter(new LoggingFilter());
       hostMap.put(basePath, client);
