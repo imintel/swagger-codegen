@@ -105,8 +105,8 @@ class BasicGeneratorTest extends FlatSpec with Matchers {
     // inspect properties
     bundle("name") should be ("SampleObject")
     bundle("className") should be ("SampleObject")
-    bundle("invokerPackage") should be (Some("org.imintel.client.common"))
-    bundle("package") should be (Some("org.imintel.client.model"))
+    bundle("invokerPackage") should be (Some(System.getenv("GROUP_ID")+".common"))
+    bundle("package") should be (Some(System.getenv("GROUP_ID")+".model"))
 
     // inspect models
     val modelList = bundle("models").asInstanceOf[List[Map[String, AnyRef]]]

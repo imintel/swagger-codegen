@@ -29,8 +29,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class JavaClientCodegen extends DefaultCodegen implements CodegenConfig {
-    protected String invokerPackage = "org.imintel.client";
-    protected String groupId = "org.imintel.client";
+    protected String invokerPackage = System.getenv("GROUP_ID");
+    protected String groupId = System.getenv("GROUP_ID")+"";
     protected String artifactId = "semapp-java-client";
     protected String artifactVersion = "1.3.1-next-SNAPSHOT";
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaClientCodegen.class);
@@ -45,8 +45,8 @@ public class JavaClientCodegen extends DefaultCodegen implements CodegenConfig {
         modelTemplateFiles.put("model.mustache", ".java");
         apiTemplateFiles.put("api.mustache", ".java");
         templateDir = "Java";
-        apiPackage = "org.imintel.client.api";
-        modelPackage = "org.imintel.client.model";
+        apiPackage = System.getenv("GROUP_ID")+".api";
+        modelPackage = System.getenv("GROUP_ID")+".model";
 
         reservedWords = new HashSet<String>(
                 Arrays.asList(

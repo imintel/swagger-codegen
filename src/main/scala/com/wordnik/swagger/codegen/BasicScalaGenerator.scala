@@ -114,10 +114,10 @@ class BasicScalaGenerator extends BasicGenerator {
   )
 
   // package for models
-  override def modelPackage: Option[String] = Some("org.imintel.client.model")
+  override def modelPackage: Option[String] = Some(System.getenv("GROUP_ID")+".model")
 
   // package for api classes
-  override def apiPackage: Option[String] = Some("org.imintel.client.api")
+  override def apiPackage: Option[String] = Some(System.getenv("GROUP_ID")+".api")
 
   // response classes--if you don't want a response class, override and set to None
   override def processResponseClass(responseClass: String): Option[String] = {
@@ -212,7 +212,7 @@ class BasicScalaGenerator extends BasicGenerator {
   additionalParams ++= Map(
     "artifactId" -> "semapp-scala-client",
     "apiVersion" -> ("1.3.1-next-SNAPSHOT"),
-    "groupId" -> "org.imintel.client")
+    "groupId" -> System.getenv("GROUP_ID")+"")
 
   // supporting classes
   override def supportingFiles = List(

@@ -23,7 +23,7 @@ public class {{classname}} {
   private ApiClient {{localVariablePrefix}}apiClient;
 
   public {{classname}}() {
-    this(org.imintel.client.Configuration.getDefaultApiClient());
+    this({{groupId}}.Configuration.getDefaultApiClient());
   }
 
   public {{classname}}(String basePath, ApiClient apiClient) {
@@ -32,7 +32,7 @@ public class {{classname}} {
   }
 
   public {{classname}}(String basePath) {
-    this.apiClient = org.imintel.client.Configuration.getDefaultApiClient();
+    this.apiClient = {{groupId}}.Configuration.getDefaultApiClient();
     apiClient.setBasePath(basePath);
   }
 

@@ -99,10 +99,10 @@ class BasicJavaGenerator extends BasicGenerator {
   )
 
   // package for models
-  override def modelPackage: Option[String] = Some("org.imintel.client.model")
+  override def modelPackage: Option[String] = Some(System.getenv("GROUP_ID")+"model")
 
   // package for api classes
-  override def apiPackage: Option[String] = Some("org.imintel.client.api")
+  override def apiPackage: Option[String] = Some(System.getenv("GROUP_ID")+"api")
 
   // file suffix
   override def fileSuffix = ".java"

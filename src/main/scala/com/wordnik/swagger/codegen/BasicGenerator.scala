@@ -42,11 +42,11 @@ abstract class BasicGenerator extends CodegenConfig with PathUtil {
 
   def fileSuffix = ".scala"
 
-  override def invokerPackage: Option[String] = Some("org.imintel.client.common")
+  override def invokerPackage: Option[String] = Some(System.getenv("GROUP_ID")+"common")
 
-  override def modelPackage: Option[String] = Some("org.imintel.client.model")
+  override def modelPackage: Option[String] = Some(System.getenv("GROUP_ID")+"model")
 
-  override def apiPackage: Option[String] = Some("org.imintel.client.api")
+  override def apiPackage: Option[String] = Some(System.getenv("GROUP_ID")+"api")
 
   var codegen = new Codegen(this)
   var fileMap: Option[String] = None
