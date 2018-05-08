@@ -30,9 +30,9 @@ import org.slf4j.LoggerFactory;
 
 public class JavaClientCodegen extends DefaultCodegen implements CodegenConfig {
     protected String invokerPackage = System.getenv("GROUP_ID");
-    protected String groupId = System.getenv("GROUP_ID")+"";
-    protected String artifactId = "semapp-java-client";
-    protected String artifactVersion = "1.3.1-next-SNAPSHOT";
+    protected String groupId = System.getenv("GROUP_ID");
+    protected String artifactId = System.getenv("ARTIFACT_ID");
+    protected String artifactVersion = System.getenv("ARTIFACT_VERSION");
     private static final Logger LOGGER = LoggerFactory.getLogger(JavaClientCodegen.class);
 
     protected String sourceFolder = "src/main/java";
