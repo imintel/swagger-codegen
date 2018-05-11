@@ -30,8 +30,12 @@
               <configuration>
                 <relocations>
                   <relocation>
-                    <pattern>{{groupId}}</pattern>
-                    <shadedPattern>{{groupId}}.shaded</shadedPattern>
+                    <pattern>com.sun.jersey</pattern>
+                    <shadedPattern>{{groupId}}.shaded.com.sun.jersey</shadedPattern>
+                  </relocation>
+                  <relocation>
+                    <pattern>com.fasterxml.jackson.core</pattern>
+                    <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson.core</shadedPattern>
                   </relocation>
                 </relocations>
               <transformers>
