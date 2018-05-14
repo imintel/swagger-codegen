@@ -40,10 +40,18 @@
                     <shadedPattern>{{groupId}}.shaded.com.sun.jersey</shadedPattern>
                   </relocation>
                   <relocation>
-                    <pattern>com.fasterxml.jackson</pattern>
-                    <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson</shadedPattern>
+                    <pattern>com.sun.jersey.contribs</pattern>
+                    <shadedPattern>{{groupId}}.shaded.com.sun.jersey.contribs</shadedPattern>
+                  </relocation>
+                  <relocation>
+                    <pattern>com.fasterxml.jackson.core</pattern>
+                    <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson.core</shadedPattern>
                   </relocation>
                 </relocations>
+                <relocation>
+                  <pattern>com.fasterxml.jackson.datatype</pattern>
+                  <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson.datatype</shadedPattern>
+                </relocation>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"/>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
