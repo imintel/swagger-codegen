@@ -30,31 +30,39 @@
               <configuration>
               <artifactSet>
                 <includes>
+                <include>io.swagger:*</include>
                   <include>com.fasterxml.jackson.**</include>
                   <include>com.sun.jersey:*</include>
+                  <include>com.sun.jersey.contribs:*</include>
+                  <include>joda-time:*</include>
+                  <include>org.jvnet.mimepull:*</include>
                </includes>
-               </artifactSet>
-                <relocations>
+              </artifactSet>
+              <relocations>
+                <relocation>
+                  <pattern>io.swagger</pattern>
+                  <shadedPattern>{{groupId}}.shaded.io.swagger</shadedPattern>
+                </relocation>
                   <relocation>
                     <pattern>com.sun.jersey</pattern>
                     <shadedPattern>{{groupId}}.shaded.com.sun.jersey</shadedPattern>
                   </relocation>
                   <relocation>
-                    <pattern>com.sun.jersey.contribs</pattern>
-                    <shadedPattern>{{groupId}}.shaded.com.sun.jersey.contribs</shadedPattern>
+                    <pattern>com.fasterxml.jackson</pattern>
+                    <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson</shadedPattern>
                   </relocation>
                   <relocation>
-                    <pattern>com.fasterxml.jackson.core</pattern>
-                    <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson.core</shadedPattern>
+                    <pattern>joda-time</pattern>
+                    <shadedPattern>{{groupId}}.shaded.joda-time</shadedPattern>
+                  </relocation>
+                  <relocation>
+                    <pattern>org.jvnet.mimepull</pattern>
+                    <shadedPattern>{{groupId}}.shaded.org.jvnet.mimepull</shadedPattern>
                   </relocation>
                 </relocations>
-                <relocation>
-                  <pattern>com.fasterxml.jackson.datatype</pattern>
-                  <shadedPattern>{{groupId}}.shaded.com.fasterxml.jackson.datatype</shadedPattern>
-                </relocation>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"/>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
               </transformers>
             </configuration>
           </execution>
